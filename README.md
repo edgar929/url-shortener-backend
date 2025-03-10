@@ -29,9 +29,19 @@ npm install  # or yarn install
 Create a `.env` file in the root directory and define necessary environment variables. Example:
 
 ```env
-PORT=3000
-DATABASE_URL=mongodb://localhost:27017/url-shortener
-JWT_SECRET=your_jwt_secret
+# Database Configuration
+DB_HOST=
+DB_PORT=
+DB_USERNAME=
+DB_PASSWORD=
+DB_NAME=
+
+# JWT Configuration
+JWT_SECRET=
+
+# Rate Limiting
+THROTTLE_TTL=60
+THROTTLE_LIMIT=10
 ```
 
 ### 4️⃣ Running the Server
