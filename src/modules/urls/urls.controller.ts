@@ -46,11 +46,6 @@ export class UrlsController {
     return this.urlsService.verifyUrlOwnership(shortCode, user.id);
   }
 
-  @Get(':shortCode/stats')
-  getStats(@Param('shortCode') shortCode: string) {
-    return this.urlsService.findOne(shortCode);
-  }
-
   @Delete(':shortCode')
   async deleteUrl(
     @Param('shortCode') shortCode: string,

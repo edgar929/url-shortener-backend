@@ -81,14 +81,4 @@ export class UrlsService {
     const url = await this.verifyUrlOwnership(shortCode, userId);
     await this.urlsRepository.remove(url);
   }
-
-  // If you want to track clicks, add a clicks column to your entity first
-  // async incrementClicks(shortCode: string): Promise<void> {
-  //   await this.urlsRepository
-  //     .createQueryBuilder()
-  //     .update(Url)
-  //     .where("shortUrl = :shortCode", { shortCode })
-  //     .update({ clicks: () => "clicks + 1" })
-  //     .execute();
-  // }
 }
